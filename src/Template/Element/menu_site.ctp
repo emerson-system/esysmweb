@@ -11,7 +11,7 @@
             <?= $this->Html->link(__('Home'), ['controller' => 'Home', 'action' => 'index'], ['class' => 'nav-link']) ?>
           </li>
           <li class="nav-item menu">
-            <?= $this->Html->link(__('Sobre Empresa1'), ['controller' => 'SobreEmpresa', 'action' => 'index'], ['class' => 'nav-link']) ?>
+            <?= $this->Html->link(__('Sobre Empresa'), ['controller' => 'SobreEmpresa', 'action' => 'index'], ['class' => 'nav-link']) ?>
           </li>
           <li class="nav-item menu">
             <?= $this->Html->link(__('Blog'), ['controller' => 'Blog', 'action' => 'index'], ['class' => 'nav-link']) ?>
