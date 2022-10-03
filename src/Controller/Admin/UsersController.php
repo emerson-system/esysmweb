@@ -95,7 +95,7 @@ class UsersController extends AppController
 
                 $user->host_name = Router::fullBaseUrl() . $this->request->getAttribute("webroot") . $this->request->getParam('prefix');
                 
-                //$this->getMailer('User')->send('cadastroUser', [$user]);
+                $this->getMailer('User')->send('cadastroUser', [$user]);
 
                 $this->Flash->success(__('Cadastrado realizado com sucesso. Para enviar o e-mail retire o comentário no arquivo UsersController no método cadastrar a parte de enviar o email ($this->getMailer...)'));
 
