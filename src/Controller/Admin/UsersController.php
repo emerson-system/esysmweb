@@ -97,11 +97,11 @@ class UsersController extends AppController
                 
                 $this->getMailer('User')->send('cadastroUser', [$user]);
 
-                $this->Flash->success(__('Cadastrado realizado com sucesso. Para enviar o e-mail retire o comentário no arquivo UsersController no método cadastrar a parte de enviar o email ($this->getMailer...)'));
+                $this->Flash->success(__('Cadastro realizado com sucesso.'));
 
                 return $this->redirect(['controller' => 'Users', 'action' => 'login']);
             }
-            $this->Flash->danger(__('Erro: Cadastrado não foi realizado com sucesso'));
+            $this->Flash->danger(__('Erro: O cadastro não foi realizado com sucesso'));
         }
         $this->set(compact('user'));
     }
@@ -198,11 +198,11 @@ class UsersController extends AppController
                     $recupSenha->recuperar_senha = $user->recuperar_senha;
                 }
                 $recupSenha->host_name = Router::fullBaseUrl().$this->request->getAttribute('webroot') . $this->request->getParam('prefix');
-                //$this->getMailer('User')->send('recuperarSenha',[$recupSenha]);
+                $this->getMailer('User')->send('recuperarSenha',[$recupSenha]);
                 //var_dump($recupSenha);
                 //exit;
-                $this->Flash->success(__('E-mail encontrado, para enviar o e-mail retire o comentário no arquivo UsersController no método recuperarSenha a parte de enviar o email ($this->getMailer...)!'));
-                //$this->Flash->success(__('E-mail enviado com sucesso, verifique a sua caixa de entrada!'));
+                $this->Flash->success(__('E-mail encontrado'));
+                $this->Flash->success(__('E-mail enviado com sucesso, verifique a sua caixa de entrada!'));
                 return $this->redirect(['controller' => 'Users', 'action' => 'login']);
             }else{                
                 $this->Flash->danger(__('Erro: Nenhum usuário encontrado com esse e-mail!'));
