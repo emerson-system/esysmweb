@@ -113,4 +113,5 @@ a.cont-lendo-post{
 }
 .img-fluid{
 	width: 100% !important;
+	height: calc(100vh - 56px) !important;
 }
