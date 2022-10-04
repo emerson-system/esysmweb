@@ -111,3 +111,6 @@ a.cont-lendo-post{
 .blog-pagination > .btn{
 	border-radius: 2rem;
 }
+.img-fluid{
+	width: 100% !important;
+}
