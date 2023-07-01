@@ -2,7 +2,7 @@
     <a class="sidebar-toggle text-light mr-3">
         <span class="navbar-toggler-icon"></span>
     </a>
-    <a class="navbar-brand" href="#">Celke</a>
+    <a class="navbar-brand" href="#">Esym Web</a>
 
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
